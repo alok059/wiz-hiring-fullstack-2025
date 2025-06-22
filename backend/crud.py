@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from . import models
-from . import schemas
+import models
+import schemas
 def create_event(db: Session, event: schemas.EventCreate):
     db_event = models.Event(title=event.title, description=event.description)
     db.add(db_event)
